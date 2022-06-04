@@ -14,10 +14,10 @@ func TestEncDec(t *testing.T) {
 	}
 
 	for i := 0; i < len(strings); i += 2 {
-		if strings[i + 1] != encode(strings[i]) {
+		if strings[i + 1] != Encode(strings[i]) {
 			t.Errorf("Error encoding %v", strings[i])
 		}
-		if strings[i] != decode(strings[i + 1]) {
+		if strings[i] != Decode(strings[i + 1]) {
 			t.Errorf("Error decoding %v", strings[i + 1])
 		}
 	}

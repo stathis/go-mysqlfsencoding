@@ -1069,7 +1069,7 @@ var filename_safe_char = [128]int8 {
   1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0, /* pqrstuvwxyz{|}~. */
 }
 
-func encode(str string) (string) {
+func Encode(str string) (string) {
 	out := ""
 	b := []rune(str)
 	for i := 0; i < len(b); i++ {
@@ -1122,7 +1122,7 @@ func encode(str string) (string) {
 	return out
 }
 
-func decode(str string) (string) {
+func Decode(str string) (string) {
 	out := ""
 	length := len(str)
 	b := []rune(str)
